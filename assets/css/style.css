@@ -460,7 +460,7 @@ i,
   padding-right: 10px;
   margin-bottom: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
 }
 
@@ -468,7 +468,7 @@ i,
   text-decoration: none;
   color: #fff;
   background-color: #111727;
-  padding: 2px 70px;
+  padding: 2px 55px;
   border-radius: 8px;
   font-weight: 400;
 }
