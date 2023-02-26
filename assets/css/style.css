@@ -65,6 +65,54 @@ body {
   margin-right: 70px;
 }
 
+.navbar .menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.navbar .menu-toggle input {
+  position: absolute;
+  width: 50px;
+  height: 35px;
+  left: -13px;
+  top: -8px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.navbar .menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
 .container {
   display: flex;
   width: 90vw;
@@ -92,6 +140,7 @@ body {
 
 .wrap .isi {
   text-align: justify;
+  padding-left: 0px;
   padding-bottom: 37px;
 }
 
@@ -121,7 +170,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 50px 70px 60px;
+  margin: 50px 80px 60px;
 }
 
 .sosmed i {
@@ -422,4 +471,56 @@ i,
   padding: 2px 70px;
   border-radius: 8px;
   font-weight: 400;
+}
+
+/* Responsive Breakpoint */
+@media screen and (max-width: 768px) {
+  .nav-right a {
+    margin-right: 30px;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .wrap {
+    width: auto;
+    margin: 30px 60px;
+  }
+
+  .sosmed {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    margin: 50px auto;
+  }
+
+  .wrap-project {
+    padding-right: 20px;
+  }
+
+  .wrap-project .card-project {
+    width: 45%;
+  }
+
+  .wrap-project .card-project .btn-card a {
+    padding: 2px 45px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wrap-project {
+    background-color: salmon;
+    padding-right: 30px;
+  }
+
+  .wrap-project .card-project {
+    width: 100%;
+  }
+
+  .wrap-project .card-project .btn-card a {
+    margin: 0px 10px;
+  }
 }
