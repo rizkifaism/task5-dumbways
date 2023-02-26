@@ -460,15 +460,16 @@ i,
   padding-right: 10px;
   margin-bottom: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-end;
+  background-color: salmon;
 }
 
 .wrap-project .card-project .btn-card a {
   text-decoration: none;
   color: #fff;
   background-color: #111727;
-  padding: 2px 55px;
+  padding: 2px 70px;
   border-radius: 8px;
   font-weight: 400;
 }
